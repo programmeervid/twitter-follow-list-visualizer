@@ -20,6 +20,6 @@ With this script, two [unflwrs](https://unflwrs.syfaro.com/) archives can be mer
 
 ### Requirements
 To use this script, you need to:
- - have Python installed (I tested it on Python 3.10)
- - have the easygui module installed (can be done by running `pip install easygui` after installing Python)
+ - have **Python** installed (I tested it on Python 3.10)
+ - have the **easygui** module installed (can be done by running `pip install easygui` after installing Python)
  
