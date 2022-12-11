@@ -1,4 +1,4 @@
-# twitter-follow-list-visualizer
+# Twitter follow list visualizer
 A small Python script that creates HTML visualizations for JSON Twitter follow list exports made using [unflwrs](https://unflwrs.syfaro.com/) by [Syfaro](https://github.com/Syfaro). The script supports custom follow lists.
 
 To use this visualizer, it is important that the *"download profile pictures"* and *"export json instead of csv"* boxes are checked in the [unflwrs](https://unflwrs.syfaro.com/) tool:
