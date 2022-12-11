@@ -1,0 +1,167 @@
+[
+    [
+        {
+            "id": "20968385",
+            "name": "RTL Nieuws",
+            "username": "RTLnieuws",
+            "created_at": "2009-02-16T07:17:30Z",
+            "description": "Volg het nieuws terwijl het gebeurt. De laatste berichten uit binnen- en buitenland. Politiek, sport, economie, opmerkelijk nieuws. Video.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/ElKMByR6Ht",
+                            "expanded_url": "http://www.rtlnieuws.nl",
+                            "display_url": "rtlnieuws.nl"
+                        }
+                    ]
+                }
+            },
+            "location": "Nederland",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/948470929163800576/8yYXeZbK_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/ElKMByR6Ht"
+        },
+        null
+    ],
+    [
+        {
+            "id": "2493701",
+            "name": "NU.nl",
+            "username": "NUnl",
+            "created_at": "2007-03-27T14:00:15Z",
+            "description": "Volg https://t.co/qoZ9n7PtWg voor het belangrijkste nieuws op het gebied van binnenland, buitenland, politiek, klimaat, economie, sport, tech en entertainment.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/siy3g69vuy",
+                            "expanded_url": "https://www.nu.nl/",
+                            "display_url": "nu.nl"
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": [
+                        {
+                            "start": 5,
+                            "end": 28,
+                            "url": "https://t.co/qoZ9n7PtWg",
+                            "expanded_url": "http://NU.nl",
+                            "display_url": "NU.nl"
+                        }
+                    ]
+                }
+            },
+            "pinned_tweet_id": "714744198507921408",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1156489079250440193/GdjFOHoV_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/siy3g69vuy"
+        },
+        null
+    ],
+    [
+        {
+            "id": "7174972",
+            "name": "NOS",
+            "username": "NOS",
+            "created_at": "2007-06-30T18:31:55Z",
+            "description": "Altijd. Overal. NOS. \nVolg ons voor het laatste nieuws.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/FPpCgbIEVT",
+                            "expanded_url": "http://www.nos.nl",
+                            "display_url": "nos.nl"
+                        }
+                    ]
+                }
+            },
+            "location": "Hilversum",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1178582393634066437/6H6D2tG5_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/FPpCgbIEVT"
+        },
+        null
+    ],
+    [
+        {
+            "id": "134810937",
+            "name": "AD.nl",
+            "username": "ADnl",
+            "created_at": "2010-04-19T14:20:06Z",
+            "description": "Officieel Twitteraccount van het AD. 24/7 het laatste nieuws, volg ook @ADsportwereld en @ADshownieuws. Mail: internet@ad.nl. Webcare: @Webcare_AD.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/uuMWctlXGB",
+                            "expanded_url": "http://Instagram.com/ad_nl/",
+                            "display_url": "Instagram.com/ad_nl/"
+                        }
+                    ]
+                },
+                "description": {
+                    "mentions": [
+                        {
+                            "start": 71,
+                            "end": 85,
+                            "username": "ADsportwereld"
+                        },
+                        {
+                            "start": 89,
+                            "end": 102,
+                            "username": "ADshownieuws"
+                        },
+                        {
+                            "start": 135,
+                            "end": 146,
+                            "username": "Webcare_AD"
+                        }
+                    ]
+                }
+            },
+            "location": "Nederland",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1436277174663847941/UZm0Iu4b_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/uuMWctlXGB"
+        },
+        null
+    ],
+    [
+        {
+            "id": "2902821",
+            "name": "De Telegraaf",
+            "username": "telegraaf",
+            "created_at": "2007-03-29T22:29:18Z",
+            "description": "Spraakmakend de grootste! Elke dag het belangrijkste nieuws van De Telegraaf. Tip ons via WhatsApp: 06-13650952.",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "start": 0,
+                            "end": 23,
+                            "url": "https://t.co/0vapqHqLA1",
+                            "expanded_url": "http://www.telegraaf.nl",
+                            "display_url": "telegraaf.nl"
+                        }
+                    ]
+                }
+            },
+            "location": "Amsterdam",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/739763105996111872/bXv-uriR_normal.jpg",
+            "protected": false,
+            "url": "https://t.co/0vapqHqLA1"
+        },
+        null
+    ]
+]
