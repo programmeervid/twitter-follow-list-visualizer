@@ -23,3 +23,5 @@ To use this script, you need to:
  - have **Python** installed (I tested it on Python 3.10)
  - have the **easygui** module installed (can be done by running `pip install easygui` after installing Python)
  
+### Future plans
+I initially wrote this quite quickly for personal use, hence the sloppy code. If I have the time for it I may improve the code in the future.
