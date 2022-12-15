@@ -5,7 +5,7 @@ from os.path import isfile, isdir, splitext, join
 from shutil import copy
 
 def import_json(filepath):
-    # read JSON file (assuming UTF-8 encoding)
+    """read JSON file (assuming UTF-8 encoding)"""
     json_file = open(filepath, "r", encoding="utf-8")
     data = load(json_file)
     json_file.close()

@@ -4,8 +4,8 @@ from os.path import join, splitext, isfile
 from json import load
 
 def get_html_head(profile_key):
-    # generates head section of the HTML content
-    # takes profile_key and uses it as the title for the HTML page
+    """generates head section of the HTML content
+    takes profile_key and uses it as the title for the HTML page"""
     content = "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>"
     content += profile_key + " - Twitter"
     content += "</title>\n\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\""
@@ -580,7 +580,7 @@ def get_html_head(profile_key):
     return content
 
 def get_html_body(navbar_content, profiles_content):
-    # generates body section of the HTML content
+    """generates body section of the HTML content"""
     content = "\t<body>\n"
     content += "\t\t<div id=\"slack-archive-viewer\">\n"
     content += "\t\t\t<div class=\""
@@ -595,7 +595,7 @@ def get_html_body(navbar_content, profiles_content):
     return content
 
 def get_html_navbar(current_key, profile_keys):
-    # generates HTML navbar
+    """generates HTML navbar"""
     content = ""
     for k in profile_keys:
         content += "\t\t\t\t\t<div class=\"channel"
@@ -608,7 +608,7 @@ def get_html_navbar(current_key, profile_keys):
     return content
 
 def get_html_urls(urls):
-    # generates HTML for a list of URLs
+    """generates HTML for a list of URLs"""
     content = "\t\t\t\t\t<ul class=\"message-url-container\">\n"
     for url in urls:
         content += "\t\t\t\t\t\t<li><a id=\"li-url\" href=\""
@@ -620,7 +620,7 @@ def get_html_urls(urls):
     return content
 
 def get_html_profile(handle, name, timestamp, description, location, urls):
-    # generates HTML for an individual user profile
+    """generates HTML for an individual user profile"""
     content = "\t\t\t\t<div class=\"message-container\">\n\t\t\t\t\t<div class=\"message-header\">\n\t\t\t\t\t\t<img src=\"profile_picture/"
     content += handle
     content += ".jpg\" class=\"user-icon\" />\n\t\t\t\t\t\t<div class=\"user-info\">\n"
@@ -640,7 +640,7 @@ def get_html_profile(handle, name, timestamp, description, location, urls):
     return content
 
 def get_html_content(profiles):
-    # generates HTML for all user profiles
+    """generates HTML for all user profiles"""
     content = ""
     for p in profiles:
         handle = p[0].get("username", "")
@@ -653,7 +653,7 @@ def get_html_content(profiles):
     return content
 
 def write_htmls(profile_data, root_dir):
-    # writes HTML files in root_dir for all entries in profile_data
+    """writes HTML files in root_dir for all entries in profile_data"""
     for profile_key in profile_data.keys():
         output_file = open(join(root_dir, profile_key+".html"), "w", encoding="utf-8")
         header = get_html_head(profile_key)
@@ -665,14 +665,14 @@ def write_htmls(profile_data, root_dir):
         output_file.close()
 
 def import_json(filepath):
-    # read JSON file (assuming UTF-8 encoding)
+    """read JSON file (assuming UTF-8 encoding)"""
     json_file = open(filepath, "r", encoding="utf-8")
     data = load(json_file)
     json_file.close()
     return data
 
 def generate_mutuals(profile_data):
-    # returns list of profiles that are both in the "following" and in the "followers" list
+    """returns list of profiles that are both in the "following" and in the "followers" list"""
     return [handle for handle in profile_data.get("following", []) if handle[0].get("username", "") in list(map(lambda x: x[0].get("username", ""), profile_data.get("followers", [])))]
 
 def main():
