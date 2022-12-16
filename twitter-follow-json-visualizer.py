@@ -647,7 +647,7 @@ def get_html_profile(handle, name, timestamp, description, location, urls, text_
         content += location
         content += "</li>\n\t\t\t\t\t</ul>\n"
     content += get_html_urls(urls)
-    if urls_pinned:
+    if text_pinned:
         content += "\t\t\t\t\t<div class=\"pinned_tweet\">\n"
         content += "\t\t\t\t\t\t<p class=\"pinned_text\">"
         content += text_pinned
