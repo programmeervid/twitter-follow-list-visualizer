@@ -18,6 +18,9 @@ With this script, two [unflwrs](https://unflwrs.syfaro.com/) archives can be mer
  2. the second input directory (in case of collisions files from this directory will be kept)
  3. the output directory
 
+### Update 16-12-2022
+-   Now URLs from pinned tweets are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Now you can still get into contact with these people using this visualizer alone.
+
 ### Requirements
 To use this script, you need to:
 -   have  **Python**  installed (tested on version 3.10.2)
