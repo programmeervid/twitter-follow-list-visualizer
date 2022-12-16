@@ -5,9 +5,6 @@ To use this visualizer, it is important that the *"download profile pictures"* a
 
 ![2022-12-11 18_46_24-unflwrs](https://user-images.githubusercontent.com/78315156/206920292-36ccc4e9-90ae-4fcf-abb1-4de2bb7ee300.png)
 
-### Changelog 16-12-2022
--   Now URLs from pinned tweets are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Now you can still get into contact with these people using this visualizer alone.
-
 ### twitter-follow-json-visualizer.py
 With this script, the user selects the directory in which the [unflwrs](https://unflwrs.syfaro.com/) JSON files are stored. For the program to run, at least the `following.json`, `followers.json` files and the `profile_pictures` directory need to be present in that directory. The resulting HTML pages will look like this:
 
@@ -20,6 +17,9 @@ With this script, two [unflwrs](https://unflwrs.syfaro.com/) archives can be mer
  1. the first input directory
  2. the second input directory (in case of collisions files from this directory will be kept)
  3. the output directory
+
+### Update 16-12-2022
+-   Now URLs from pinned tweets are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Now you can still get into contact with these people using this visualizer alone.
 
 ### Requirements
 To use this script, you need to:
