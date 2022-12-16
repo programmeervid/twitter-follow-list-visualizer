@@ -609,6 +609,8 @@ def get_html_navbar(current_key, profile_keys):
 
 def get_html_urls(urls):
     """generates HTML for a list of URLs"""
+    if not urls:
+        return ""
     content = "\t\t\t\t\t<ul class=\"message-url-container\">\n"
     for url in urls:
         content += "\t\t\t\t\t\t<li><a id=\"li-url\" href=\""
@@ -619,7 +621,7 @@ def get_html_urls(urls):
     content += "\t\t\t\t\t</ul>\n"
     return content
 
-def get_html_profile(handle, name, timestamp, description, location, urls):
+def get_html_profile(handle, name, timestamp, description, location, urls, urls_pinned):
     """generates HTML for an individual user profile"""
     content = "\t\t\t\t<div class=\"message-container\">\n\t\t\t\t\t<div class=\"message-header\">\n\t\t\t\t\t\t<img src=\"profile_picture/"
     content += handle
@@ -636,6 +638,9 @@ def get_html_profile(handle, name, timestamp, description, location, urls):
         content += location
         content += "</li>\n\t\t\t\t\t</ul>\n"
     content += get_html_urls(urls)
+    if urls_pinned:
+        content += "\t\t\t\t\tURLs in pinned tweet:\n"
+    content += get_html_urls(urls_pinned)
     content += "\t\t\t\t</div>\n\t\t\t</div>\n"
     return content
 
@@ -649,7 +654,8 @@ def get_html_content(profiles):
         description = p[0].get("description", "")
         location = p[0].get("location", "")
         urls = list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[0].get("entities", {}).get("url", {}).get("urls", []))) + list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[0].get("entities", {}).get("description", {}).get("urls", [])))
-        content += get_html_profile(handle, name, timestamp, description, location, urls)
+        urls_pinned = list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[1].get("entities", {}).get("urls", {}))) if p[1] else []
+        content += get_html_profile(handle, name, timestamp, description, location, urls, urls_pinned)
     return content
 
 def write_htmls(profile_data, root_dir):
