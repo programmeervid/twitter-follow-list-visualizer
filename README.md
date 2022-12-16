@@ -12,14 +12,13 @@ With this script, the user selects the directory in which the [unflwrs](https://
 
 All URLs that are available on the profile, whether in the description or in the URL section, are all shown. Thus, it's guaranteed that all available URLs are shown. The creation date of the twitter account and the location, if available, is also shown.
 
+**Update 16-12-2022:** Pinned tweets and the URLs in them are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Even worse, some people only share the HANDLES of their other socials, without any links. Now you can still get into contact with these people.
+
 ### twitter-follow-json-directory-merger.py
 With this script, two [unflwrs](https://unflwrs.syfaro.com/) archives can be merged. The user is asked to select three directories:
  1. the first input directory
  2. the second input directory (in case of collisions files from this directory will be kept)
  3. the output directory
-
-### Update 16-12-2022
--   Pinned tweets and the URLs in them are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Even worse, some people only share the HANDLES of their other socials, without any links. Now you can still get into contact with these people.
 
 ### Requirements
 To use this script, you need to:
