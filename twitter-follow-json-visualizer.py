@@ -265,7 +265,7 @@ def get_html_head(profile_key):
 				display: inline-block;
 				vertical-align: top;
 				line-height: 1;
-				width: calc(100% - 3em);
+				width: 100%;
 				bottom: 0;
 			}
 
@@ -573,9 +573,18 @@ def get_html_head(profile_key):
 				text-decoration: none;
 			}
 
-			.close {
-				display: none;
-			}"""
+            .pinned_tweet {
+                background: #f7f7f7;
+                border-radius: 16px;
+                border: 1px solid #cfd9de;
+                margin: 10px 0 0 0;
+                padding: 10px;
+            }
+
+            .pinned_text {
+                margin: 0;
+                padding: 0;
+            }"""
     content += "\n\t\t</style>\n\t</head>\n"
     return content
 
@@ -621,7 +630,7 @@ def get_html_urls(urls):
     content += "\t\t\t\t\t</ul>\n"
     return content
 
-def get_html_profile(handle, name, timestamp, description, location, urls, urls_pinned):
+def get_html_profile(handle, name, timestamp, description, location, urls, text_pinned="", urls_pinned=[]):
     """generates HTML for an individual user profile"""
     content = "\t\t\t\t<div class=\"message-container\">\n\t\t\t\t\t<div class=\"message-header\">\n\t\t\t\t\t\t<img src=\"profile_picture/"
     content += handle
@@ -639,8 +648,12 @@ def get_html_profile(handle, name, timestamp, description, location, urls, urls_
         content += "</li>\n\t\t\t\t\t</ul>\n"
     content += get_html_urls(urls)
     if urls_pinned:
-        content += "\t\t\t\t\tURLs in pinned tweet:\n"
-    content += get_html_urls(urls_pinned)
+        content += "\t\t\t\t\t<div class=\"pinned_tweet\">\n"
+        content += "\t\t\t\t\t\t<p class=\"pinned_text\">"
+        content += text_pinned
+        content += "</p>\n"
+        content += get_html_urls(urls_pinned)
+        content += "\t\t\t\t\t</div>\n"
     content += "\t\t\t\t</div>\n\t\t\t</div>\n"
     return content
 
@@ -654,8 +667,9 @@ def get_html_content(profiles):
         description = p[0].get("description", "")
         location = p[0].get("location", "")
         urls = list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[0].get("entities", {}).get("url", {}).get("urls", []))) + list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[0].get("entities", {}).get("description", {}).get("urls", [])))
+        text_pinned = p[1].get("text", "") if p[1] else ""
         urls_pinned = list(map(lambda e: (e.get("display_url", ""), e.get("expanded_url", "")), p[1].get("entities", {}).get("urls", {}))) if p[1] else []
-        content += get_html_profile(handle, name, timestamp, description, location, urls, urls_pinned)
+        content += get_html_profile(handle, name, timestamp, description, location, urls, text_pinned, urls_pinned)
     return content
 
 def write_htmls(profile_data, root_dir):
