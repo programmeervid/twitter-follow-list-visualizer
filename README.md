@@ -19,7 +19,7 @@ With this script, two [unflwrs](https://unflwrs.syfaro.com/) archives can be mer
  3. the output directory
 
 ### Update 16-12-2022
--   Now URLs from pinned tweets are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Now you can still get into contact with these people using this visualizer alone.
+-   Pinned tweets and the URLs in them are listed as well. Some people put links to their linktree or other socials in their pinned tweet ONLY. Even worse, some people only share the HANDLES of their other socials, without any links. Now you can still get into contact with these people.
 
 ### Requirements
 To use this script, you need to:
